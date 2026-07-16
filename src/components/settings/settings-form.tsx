@@ -44,31 +44,31 @@ export function SettingsForm({ activeModelVersion, segments }: SettingsFormProps
   };
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4 rounded-lg border border-slate-200 bg-white p-4">
+    <form onSubmit={onSubmit} className="card space-y-4 p-4">
       <label className="block space-y-1">
-        <span className="text-sm font-medium text-slate-700">Versão ativa do modelo</span>
+        <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Versão ativa do modelo</span>
         <input
           value={version}
           onChange={(event) => setVersion(event.target.value)}
-          className="w-full rounded-md border border-slate-300 px-3 py-2"
+          className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
         />
       </label>
 
       <div className="space-y-2">
         {items.map((item) => (
           <label key={item.id} className="block space-y-1">
-            <span className="text-sm text-slate-600">Cluster {item.clusterId}</span>
+            <span className="text-sm text-slate-600 dark:text-slate-400">Cluster {item.clusterId}</span>
             <input
               value={item.label}
               onChange={(event) => updateLabel(item.id, event.target.value)}
-              className="w-full rounded-md border border-slate-300 px-3 py-2"
+              className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
             />
           </label>
         ))}
       </div>
 
       <button className="rounded-md bg-teal-700 px-4 py-2 font-medium text-white">Salvar</button>
-      {message ? <p className="text-sm text-slate-700">{message}</p> : null}
+      {message ? <p className="text-sm text-slate-700 dark:text-slate-300">{message}</p> : null}
     </form>
   );
 }
