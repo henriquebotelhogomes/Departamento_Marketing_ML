@@ -35,6 +35,8 @@ CardSense é uma plataforma de **Marketing Analytics** que combina ciência de d
 
 Projeto de portfólio profissional de **Cientista de Dados Sênior**, defensável em entrevistas técnicas.
 
+**Demo online:** [https://departamento-marketing-ml.onrender.com](https://departamento-marketing-ml.onrender.com)
+
 ---
 
 ## Arquitetura do Sistema
