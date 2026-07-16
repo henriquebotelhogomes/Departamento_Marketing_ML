@@ -2,6 +2,10 @@ FROM node:20-slim AS installer
 
 WORKDIR /app
 
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends openssl ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
 COPY package.json package-lock.json ./
 RUN npm ci --include=dev
 
@@ -11,6 +15,10 @@ RUN npx prisma generate
 FROM node:20-slim AS builder
 
 WORKDIR /app
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends openssl ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
 COPY --from=installer /app/node_modules ./node_modules
 COPY . .
 
@@ -19,6 +27,8 @@ ENV DATABASE_URL=$DATABASE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN npx prisma generate && \
+    npx prisma migrate deploy && \
+    npx tsx prisma/seed.ts && \
     npm run build
 
 FROM node:20-slim AS runner
@@ -28,7 +38,10 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN addgroup --system --gid 1001 nodejs && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends openssl ca-certificates && \
+    rm -rf /var/lib/apt/lists/* && \
+    addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs && \
     npm install -g tsx
 
