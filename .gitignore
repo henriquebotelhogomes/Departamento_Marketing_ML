@@ -31,6 +31,8 @@ yarn-error.log*
 # prisma
 dev.db
 dev.db-journal
+data/production.db
+data/production.db-journal
 prisma/migrations/dev/
 
 # python
