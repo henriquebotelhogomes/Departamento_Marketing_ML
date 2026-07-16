@@ -65,7 +65,7 @@ export default async function DatasetPage({ searchParams }: DatasetPageProps) {
 
       <div className="card overflow-x-auto">
         <table className="min-w-[1400px] text-sm">
-          <thead className="sticky top-0 bg-slate-50 text-left text-slate-600">
+          <thead className="sticky top-0 bg-slate-50 text-left text-slate-600 dark:bg-slate-800/90 dark:text-slate-200">
             <tr>
               <th className="px-3 py-2">CUST_ID</th>
               <th className="px-3 py-2">BALANCE</th>
@@ -84,7 +84,7 @@ export default async function DatasetPage({ searchParams }: DatasetPageProps) {
           </thead>
           <tbody>
             {rows.map((row) => (
-              <tr key={row.id} className="border-t border-slate-100">
+              <tr key={row.id} className="border-t border-slate-100 dark:border-slate-700">
                 <td className="px-3 py-2">{row.custId}</td>
                 <td className="px-3 py-2">{row.balance.toFixed(2)}</td>
                 <td className="px-3 py-2">{row.purchases.toFixed(2)}</td>
