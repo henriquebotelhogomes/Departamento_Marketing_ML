@@ -170,7 +170,7 @@ O modelo não supervisionado identificou **4 perfis comportamentais** na base de
 | [pytest](https://docs.pytest.org/) | Testes Python |
 | [ESLint](https://eslint.org/) | Lint TypeScript |
 | [Ruff](https://docs.astral.sh/ruff/) | Lint + format Python |
-| [Pyright](https://microsoft.github.io/pyright/) | Type checking Python (strict) |
+| [Pyright](https://microsoft.github.io/pyright/) | Type checking Python (basic) |
 | [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) | Documentação técnica |
 | [Swagger UI](https://swagger.io/tools/swagger-ui/) | Documentação interativa de APIs |
 
