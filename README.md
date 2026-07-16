@@ -43,37 +43,43 @@ O fluxo abaixo ilustra como dados, ML e frontend se integram:
 
 ```mermaid
 flowchart TB
-    subgraph Dados["📦 Dados"]
-        CSV[Marketing_data.csv<br/>8.950 clientes<br/>18 variáveis]
+    subgraph Dados["Dados"]
+        CSV["Marketing_data.csv<br/>8.950 clientes<br/>18 variáveis"]
     end
 
-    subgraph ML["🧠 Pipeline de ML (Python)"]
-        A1[Limpeza & Imputação<br/>mediana para nulos]
-        A2[Padronização<br/>StandardScaler]
-        A3[Redução de Dimensionalidade<br/>PCA + Autoencoder 17→10]
-        A4[Clusterização<br/>K-Means k=4]
-        A5[Avaliação<br/>Silhouette / DB / CH]
-        A6[Interpretação<br/>centróides → segmentos]
+    subgraph ML["Pipeline de ML (Python)"]
+        A1["Limpeza & Imputação<br/>mediana para nulos"]
+        A2["Padronização<br/>StandardScaler"]
+        A3["Redução de Dimensionalidade<br/>PCA + Autoencoder 17→10"]
+        A4["Clusterização<br/>K-Means k=4"]
+        A5["Avaliação<br/>Silhouette / DB / CH"]
+        A6["Interpretação<br/>centróides → segmentos"]
         A1 --> A2 --> A3 --> A4 --> A5 --> A6
     end
 
-    subgraph Artefatos["💾 Artefatos"]
-        S1[data/segments.csv]
-        S2[data/segment_profiles.json]
-        S3[analysis/models/metrics_v1.json]
+    subgraph Artefatos["Artefatos"]
+        S1["data/segments.csv"]
+        S2["data/segment_profiles.json"]
+        S3["analysis/models/metrics_v1.json"]
     end
 
-    subgraph App["🌐 Aplicação (Next.js)"]
-        B1[Prisma ORM<br/>SQLite]
-        B2[API Routes<br/>10 endpoints]
-        B3[Dashboard<br/>11 gráficos + KPIs]
-        B4[Landing Page<br/>Segmentos & Métricas]
+    subgraph App["Aplicação (Next.js)"]
+        B1["Prisma ORM<br/>SQLite"]
+        B2["API Routes<br/>10 endpoints"]
+        B3["Dashboard<br/>11 gráficos + KPIs"]
+        B4["Landing Page<br/>Segmentos & Métricas"]
     end
 
     CSV --> A1
-    A6 --> S1 & S2 & S3
-    S1 & S2 --> B1
-    B1 --> B2 --> B3 & B4
+    A6 --> S1
+    A6 --> S2
+    A6 --> S3
+    S1 --> B1
+    S2 --> B1
+    S3 --> B2
+    B1 --> B2
+    B2 --> B3
+    B2 --> B4
 ```
 
 ## Por Que Este Projeto Existe
