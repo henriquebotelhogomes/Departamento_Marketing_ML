@@ -79,7 +79,7 @@ export default async function CustomersPage({ searchParams }: CustomersPageProps
 
       <div className="card overflow-x-auto">
         <table className="min-w-full text-sm">
-          <thead className="bg-slate-50 text-left text-slate-600">
+          <thead className="bg-slate-50 text-left text-slate-600 dark:bg-slate-800/90 dark:text-slate-200">
             <tr>
               <th className="px-3 py-2">CUST_ID</th>
               <th className="px-3 py-2">Segmento</th>
@@ -92,8 +92,8 @@ export default async function CustomersPage({ searchParams }: CustomersPageProps
           </thead>
           <tbody>
             {customers.map((customer) => (
-              <tr key={customer.id} className="border-t border-slate-100">
-                <td className="px-3 py-2 font-medium text-teal-800">
+              <tr key={customer.id} className="border-t border-slate-100 dark:border-slate-700">
+                <td className="px-3 py-2 font-medium text-teal-800 dark:text-teal-300">
                   <Link href={`/customers/${customer.id}`}>{customer.custId}</Link>
                 </td>
                 <td className="px-3 py-2">
