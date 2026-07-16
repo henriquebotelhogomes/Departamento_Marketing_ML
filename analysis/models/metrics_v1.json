@@ -1,0 +1,108 @@
+{
+  "modelVersion": "v1",
+  "algorithm": "Autoencoder+KMeans",
+  "nClusters": 4,
+  "silhouette": 0.3955458998680115,
+  "daviesBouldin": 1.4702483058978706,
+  "calinskiHarabasz": 2756.0229556953127,
+  "inertia": 70029.796875,
+  "usedAutoencoder": true,
+  "nComponentsPca": 2,
+  "trainedAt": "2026-07-16T00:21:36.152796+00:00",
+  "medianas": {
+    "MINIMUM_PAYMENTS": 312.343947,
+    "CREDIT_LIMIT": 3000.0
+  },
+  "elbowCurve": [
+    {
+      "k": 1,
+      "inertia": 134752.640625
+    },
+    {
+      "k": 2,
+      "inertia": 94777.03125
+    },
+    {
+      "k": 3,
+      "inertia": 78017.515625
+    },
+    {
+      "k": 4,
+      "inertia": 70029.796875
+    },
+    {
+      "k": 5,
+      "inertia": 63460.6484375
+    },
+    {
+      "k": 6,
+      "inertia": 58838.8125
+    },
+    {
+      "k": 7,
+      "inertia": 55319.9453125
+    },
+    {
+      "k": 8,
+      "inertia": 52462.734375
+    },
+    {
+      "k": 9,
+      "inertia": 50061.71875
+    },
+    {
+      "k": 10,
+      "inertia": 48165.52734375
+    }
+  ],
+  "silhouettesCurve": [
+    {
+      "k": 2,
+      "silhouette": 0.528298020362854
+    },
+    {
+      "k": 3,
+      "silhouette": 0.4227491021156311
+    },
+    {
+      "k": 4,
+      "silhouette": 0.3955458998680115
+    },
+    {
+      "k": 5,
+      "silhouette": 0.32539188861846924
+    },
+    {
+      "k": 6,
+      "silhouette": 0.2844325602054596
+    },
+    {
+      "k": 7,
+      "silhouette": 0.26052340865135193
+    },
+    {
+      "k": 8,
+      "silhouette": 0.25939545035362244
+    },
+    {
+      "k": 9,
+      "silhouette": 0.23559452593326569
+    },
+    {
+      "k": 10,
+      "silhouette": 0.22175216674804688
+    }
+  ],
+  "baselineKMeans": {
+    "silhouette": 0.1976791965228765,
+    "daviesBouldin": 1.5748369902985795,
+    "calinskiHarabasz": 1598.0768763697033,
+    "inertia": 99061.93984229013
+  },
+  "rotulos": {
+    "3": "Usuário de Adiantamento",
+    "1": "Bom Pagador",
+    "2": "Comprador Ativo",
+    "0": "Devedor Rotativo"
+  }
+}

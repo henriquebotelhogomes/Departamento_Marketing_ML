@@ -1,0 +1,249 @@
+{
+  "modelVersion": "v1",
+  "segments": [
+    {
+      "clusterId": 3,
+      "label": "Usuário de Adiantamento",
+      "description": "Alto CASH_ADVANCE e CASH_ADVANCE_FREQUENCY, poucas compras.",
+      "customerCount": 99,
+      "sharePct": 1.11,
+      "avgBalance": 6010.001547181818,
+      "avgPurchases": 12430.882727272727,
+      "avgCashAdvance": 4638.516891717171,
+      "avgCreditLimit": 12664.141414141413,
+      "avgPrcFullPayment": 0.2899583535353535,
+      "dominantFeatures": [
+        {
+          "feature": "CASH_ADVANCE",
+          "direction": "high",
+          "zScore": 11.271383285522461,
+          "centroidValue": 4638.516891717171,
+          "overallMean": 978.8711124654749
+        },
+        {
+          "feature": "ONEOFF_PURCHASES_FREQUENCY",
+          "direction": "high",
+          "zScore": 8.272089004516602,
+          "centroidValue": 0.5929774242424243,
+          "overallMean": 0.202457683575419
+        },
+        {
+          "feature": "PURCHASES",
+          "direction": "high",
+          "zScore": 7.02062463760376,
+          "centroidValue": 12430.882727272727,
+          "overallMean": 1003.2048335195531
+        },
+        {
+          "feature": "BALANCE",
+          "direction": "high",
+          "zScore": 6.745300769805908,
+          "centroidValue": 6010.001547181818,
+          "overallMean": 1564.4748276781006
+        },
+        {
+          "feature": "PURCHASES_FREQUENCY",
+          "direction": "high",
+          "zScore": 6.076450824737549,
+          "centroidValue": 0.8237526666666667,
+          "overallMean": 0.49035054837988823
+        },
+        {
+          "feature": "PURCHASES_INSTALLMENTS_FREQUENCY",
+          "direction": "high",
+          "zScore": 5.813239097595215,
+          "centroidValue": 0.7156981111111113,
+          "overallMean": 0.3644373415642458
+        }
+      ],
+      "recommendation": [
+        "Monitoramento de risco",
+        "Alertas proativos",
+        "Oferta de crédito pessoal"
+      ]
+    },
+    {
+      "clusterId": 2,
+      "label": "Bom Pagador",
+      "description": "Alto PRC_FULL_PAYMENT e baixo saldo devedor.",
+      "customerCount": 1685,
+      "sharePct": 18.83,
+      "avgBalance": 1366.2718118735904,
+      "avgPurchases": 2532.5401364985164,
+      "avgCashAdvance": 255.84087820890207,
+      "avgCreditLimit": 6013.015196474777,
+      "avgPrcFullPayment": 0.3485275543026706,
+      "dominantFeatures": [
+        {
+          "feature": "ONEOFF_PURCHASES_FREQUENCY",
+          "direction": "high",
+          "zScore": 3.1104695796966553,
+          "centroidValue": 0.558892234421365,
+          "overallMean": 0.202457683575419
+        },
+        {
+          "feature": "PURCHASES",
+          "direction": "high",
+          "zScore": 2.8327956199645996,
+          "centroidValue": 2532.5401364985164,
+          "overallMean": 1003.2048335195531
+        },
+        {
+          "feature": "BALANCE",
+          "direction": "high",
+          "zScore": 2.6330127716064453,
+          "centroidValue": 1366.2718118735904,
+          "overallMean": 1564.4748276781006
+        },
+        {
+          "feature": "PURCHASES_INSTALLMENTS_FREQUENCY",
+          "direction": "high",
+          "zScore": 2.3162591457366943,
+          "centroidValue": 0.5551485115727003,
+          "overallMean": 0.3644373415642458
+        },
+        {
+          "feature": "INSTALLMENTS_PURCHASES",
+          "direction": "high",
+          "zScore": 1.7666027545928955,
+          "centroidValue": 885.4563086053412,
+          "overallMean": 411.0676446927374
+        },
+        {
+          "feature": "ONEOFF_PURCHASES",
+          "direction": "high",
+          "zScore": 1.7088208198547363,
+          "centroidValue": 1647.457715133531,
+          "overallMean": 592.4373709497207
+        }
+      ],
+      "recommendation": [
+        "Upgrade para cartão premium",
+        "Benefícios exclusivos",
+        "Cross-sell"
+      ]
+    },
+    {
+      "clusterId": 1,
+      "label": "Comprador Ativo",
+      "description": "Alta frequência e volume de compras, baixo adiantamento.",
+      "customerCount": 1245,
+      "sharePct": 13.91,
+      "avgBalance": 4022.93512653494,
+      "avgPurchases": 534.7380321285141,
+      "avgCashAdvance": 3943.836847166265,
+      "avgCreditLimit": 6722.493610807229,
+      "avgPrcFullPayment": 0.04135643373493976,
+      "dominantFeatures": [
+        {
+          "feature": "BALANCE_FREQUENCY",
+          "direction": "high",
+          "zScore": 4.719459056854248,
+          "centroidValue": 0.9335681100401606,
+          "overallMean": 0.8772707255865921
+        },
+        {
+          "feature": "ONEOFF_PURCHASES",
+          "direction": "high",
+          "zScore": 2.822922945022583,
+          "centroidValue": 323.1797831325301,
+          "overallMean": 592.4373709497207
+        },
+        {
+          "feature": "PURCHASES",
+          "direction": "high",
+          "zScore": 2.772224187850952,
+          "centroidValue": 534.7380321285141,
+          "overallMean": 1003.2048335195531
+        },
+        {
+          "feature": "BALANCE",
+          "direction": "high",
+          "zScore": 2.2139978408813477,
+          "centroidValue": 4022.93512653494,
+          "overallMean": 1564.4748276781006
+        },
+        {
+          "feature": "PURCHASES_INSTALLMENTS_FREQUENCY",
+          "direction": "high",
+          "zScore": 2.0933141708374023,
+          "centroidValue": 0.1834284152610442,
+          "overallMean": 0.3644373415642458
+        },
+        {
+          "feature": "ONEOFF_PURCHASES_FREQUENCY",
+          "direction": "high",
+          "zScore": 1.9303215742111206,
+          "centroidValue": 0.13570278714859438,
+          "overallMean": 0.202457683575419
+        }
+      ],
+      "recommendation": [
+        "Cashback",
+        "Programa de fidelidade",
+        "Upgrade de limite"
+      ]
+    },
+    {
+      "clusterId": 0,
+      "label": "Devedor Rotativo",
+      "description": "Alto saldo devedor e baixa taxa de pagamento integral.",
+      "customerCount": 5921,
+      "sharePct": 66.16,
+      "avgBalance": 1029.612788212295,
+      "avgPurchases": 475.41747846647536,
+      "avgCashAdvance": 500.0024539405506,
+      "avgCreditLimit": 3456.9570984289817,
+      "avgPrcFullPayment": 0.11962211416990375,
+      "dominantFeatures": [
+        {
+          "feature": "PURCHASES",
+          "direction": "high",
+          "zScore": 1.4155714511871338,
+          "centroidValue": 475.41747846647536,
+          "overallMean": 1003.2048335195531
+        },
+        {
+          "feature": "ONEOFF_PURCHASES",
+          "direction": "high",
+          "zScore": 1.331405758857727,
+          "centroidValue": 226.91298598209764,
+          "overallMean": 592.4373709497207
+        },
+        {
+          "feature": "INSTALLMENTS_PURCHASES",
+          "direction": "high",
+          "zScore": 0.8350206613540649,
+          "centroidValue": 248.83095085289648,
+          "overallMean": 411.0676446927374
+        },
+        {
+          "feature": "ONEOFF_PURCHASES_FREQUENCY",
+          "direction": "high",
+          "zScore": 0.8340176939964294,
+          "centroidValue": 0.1085303357540956,
+          "overallMean": 0.202457683575419
+        },
+        {
+          "feature": "PURCHASES_INSTALLMENTS_FREQUENCY",
+          "direction": "high",
+          "zScore": 0.783951461315155,
+          "centroidValue": 0.34235204779598044,
+          "overallMean": 0.3644373415642458
+        },
+        {
+          "feature": "BALANCE",
+          "direction": "high",
+          "zScore": 0.7556753754615784,
+          "centroidValue": 1029.612788212295,
+          "overallMean": 1564.4748276781006
+        }
+      ],
+      "recommendation": [
+        "Renegociação de dívida",
+        "Educação financeira",
+        "Parcelamento de saldo"
+      ]
+    }
+  ]
+}

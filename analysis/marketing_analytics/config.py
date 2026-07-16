@@ -1,0 +1,37 @@
+"""Constantes e configurações do pipeline de ML."""
+
+from __future__ import annotations
+
+# Ordem canonica das 17 features (CUST_ID excluido)
+FEATURES: list[str] = [
+    "BALANCE",
+    "BALANCE_FREQUENCY",
+    "PURCHASES",
+    "ONEOFF_PURCHASES",
+    "INSTALLMENTS_PURCHASES",
+    "CASH_ADVANCE",
+    "PURCHASES_FREQUENCY",
+    "ONEOFF_PURCHASES_FREQUENCY",
+    "PURCHASES_INSTALLMENTS_FREQUENCY",
+    "CASH_ADVANCE_FREQUENCY",
+    "CASH_ADVANCE_TRX",
+    "PURCHASES_TRX",
+    "CREDIT_LIMIT",
+    "PAYMENTS",
+    "MINIMUM_PAYMENTS",
+    "PRC_FULL_PAYMENT",
+    "TENURE",
+]
+
+COLUNAS_PARA_IMPUTAR: list[str] = ["MINIMUM_PAYMENTS", "CREDIT_LIMIT"]
+
+RANDOM_STATE: int = 42
+N_CLUSTERS: int = 4
+N_INIT: int = 10
+MAX_ITER: int = 300
+N_COMPONENTS_PCA: int = 2
+
+AUTOENCODER_EPOCHS: int = 50
+AUTOENCODER_BATCH_SIZE: int = 128
+
+MODEL_VERSION: str = "v1"

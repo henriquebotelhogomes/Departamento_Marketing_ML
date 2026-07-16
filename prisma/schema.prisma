@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Customer {
+  id                            String    @id @default(cuid())
+  custId                        String    @unique
+  balance                       Float
+  balanceFrequency              Float
+  purchases                     Float
+  oneoffPurchases               Float
+  installmentsPurchases         Float
+  cashAdvance                   Float
+  purchasesFrequency            Float
+  oneoffPurchasesFrequency      Float
+  purchasesInstallmentsFrequency Float
+  cashAdvanceFrequency          Float
+  cashAdvanceTrx                Int
+  purchasesTrx                  Int
+  creditLimit                   Float?
+  payments                      Float
+  minimumPayments               Float?
+  prcFullPayment                Float
+  tenure                        Int
+  clusterId                     Int?
+  segmentLabel                  String?
+  pca1                          Float?
+  pca2                          Float?
+  modelVersion                  String?
+  scoredAt                      DateTime?
+  createdAt                     DateTime  @default(now())
+  updatedAt                     DateTime  @updatedAt
+
+  @@index([clusterId])
+  @@index([modelVersion])
+}
+
+model Segment {
+  id              String   @id @default(cuid())
+  modelVersion    String
+  clusterId       Int
+  label           String
+  description     String
+  customerCount   Int
+  sharePct        Float
+  dominantFeatures String
+  avgBalance      Float
+  avgPurchases    Float
+  avgCashAdvance  Float
+  avgCreditLimit  Float
+  avgPrcFullPayment Float
+  recommendation  String
+  updatedAt       DateTime @updatedAt
+
+  @@unique([modelVersion, clusterId])
+  @@index([modelVersion])
+}
+
+model ClusterRun {
+  id              String   @id @default(cuid())
+  modelVersion    String   @unique
+  algorithm       String
+  nClusters       Int
+  silhouette      Float
+  daviesBouldin   Float
+  calinskiHarabasz Float
+  inertia         Float
+  usedAutoencoder Boolean
+  nComponentsPca  Int
+  trainedAt       DateTime
+  notes           String?
+}
+
+model SegmentationConfig {
+  id                 String   @id @default(cuid())
+  activeModelVersion String
+  updatedAt          DateTime @updatedAt
+}
