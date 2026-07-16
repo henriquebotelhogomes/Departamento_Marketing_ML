@@ -1,0 +1,61 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+
+coverage/
+.git/
+.gitignore
+
+# env
+.env
+.env.local
+.env*.local
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# ML artifacts (heavy binaries - not needed at runtime)
+*.joblib
+*.keras
+
+# editor
+.idea/
+.vscode/
+
+# docs site
+site/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# internal
+PRD.md
+PRD-v2.md
+*.tsbuildinfo
+
+# AI assistants
+.agentbridge/
+.aiassistant/
+.explyt/
+.refact/
+
+# local db (will be created at runtime)
+dev.db
+dev.db-journal
+
+# analysis notebooks
+analysis/eda.ipynb
+analysis/clustering.ipynb

@@ -176,34 +176,43 @@ O modelo não supervisionado identificou **4 perfis comportamentais** na base de
 
 ## Como Executar
 
-### Pré-requisitos
+### Docker (recomendado — requer apenas Docker)
+```bash
+docker compose up --build
+```
+
+Acesse **http://localhost:3000**.
+
+### Desenvolvimento local
+
+#### Pré-requisitos
 - Node.js 20 LTS+
 - Python 3.12+
 - npm
 
-### 1. Instalar dependências JavaScript
+#### 1. Instalar dependências JavaScript
 ```bash
 npm install
 ```
 
-### 2. Preparar ambiente Python
+#### 2. Preparar ambiente Python
 ```bash
 pip install -e .[dev]
 ```
 
-### 3. Gerar artefatos de ML
+#### 3. Gerar artefatos de ML
 ```bash
 npm run ml:train
 npm run ml:segments
 ```
 
-### 4. Criar banco e carregar dados
+#### 4. Criar banco e carregar dados
 ```bash
 npx prisma migrate dev
 npm run db:seed
 ```
 
-### 5. Iniciar aplicação
+#### 5. Iniciar aplicação
 ```bash
 npm run dev
 ```
