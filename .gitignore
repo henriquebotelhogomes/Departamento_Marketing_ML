@@ -66,6 +66,10 @@ site/
 # typescript incremental build
 tsconfig.tsbuildinfo
 
+# internal working documents (not for public portfolio)
+PRD.md
+PRD-v2.md
+
 # AI assistant artifacts
 .agentbridge/
 .aiassistant/
